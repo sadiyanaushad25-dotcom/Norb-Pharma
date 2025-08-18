@@ -3,6 +3,7 @@
     color: rgb(183, 176, 71);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    padding: 4rem;
     /* display: flex;
     flex-direction: ; */
 }
@@ -12,5 +13,12 @@
     justify-content: space-around;
     align-items: center;
     gap: 0.5rem;
-    /* flex-wrap: wrap-reverse; */
+    flex-wrap: wrap-reverse;
+}
+
+.services-wrapper-h2{
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  /* color: #222; */
+  color: rgb(183, 176, 71);
 }

@@ -1,4 +1,4 @@
-import AnimatedText from "../components/AnimatedText";
+import TextReveal from "../components/TextReveal";
 import './About.css'
 
 export default function About() {
@@ -8,12 +8,18 @@ export default function About() {
   { name: "Gowher Mirza", degree: "Mechanical Engineer & DG certified" },
 ];
   return (
-    <div style={{height:'90vh',padding: "4rem", color: "#fff", position: "relative" }}>
+    <div style={{ color: "#fff", position: "relative" }}>
       
-    <section className="team-intro">
-      <AnimatedText id="about">
+    <section className="team-intro"  id="about">
       <div className="team-header">
-        <h2>Meet Our Team</h2>
+        <TextReveal
+        as="h2"
+        text="Meet Our Team"
+        type="reverse"
+        delay={0.04}
+        className="team-header-h2"
+      />
+
         <p>
           With over 15 years of experience in handling registrations and
           navigating regulations, we’ve built a track record of success that
@@ -28,12 +34,17 @@ export default function About() {
             <div className="initial-circle">
               {emp.name.charAt(0)}
             </div>
-            <h3>{emp.name}</h3>
+              <TextReveal
+                as="h3"
+                text={emp.name}
+                type="wave"
+                delay={0.08}
+                className="highlight-text"
+              />
             <p>{emp.degree}</p>
           </div>
         ))}
       </div>
-      </AnimatedText>
     </section>
       
     </div>

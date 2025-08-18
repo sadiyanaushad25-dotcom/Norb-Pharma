@@ -2,12 +2,18 @@ import logo from '/logo.png';
 import './Navbar.css';
 
 export default function Navbar() {
-  const scrollToSection = (id) => {
+  // const scrollToSection = (id) => {
+  // const element = document.getElementById(id);
+  //     const offset =  window.innerHeight * 0.1; // height of navbar
+  // const y = element.getBoundingClientRect().top + window.scrollY - offset;
+  //   document.getElementById(id).scrollIntoView({top:y, behavior: "smooth" });
+  // };
+const scrollToSection = (id) => {
+  const navbarHeight = document.querySelector('.navbar').offsetHeight; // get actual height
   const element = document.getElementById(id);
-      const offset =  window.innerHeight * 0.1; // height of navbar
-  const y = element.getBoundingClientRect().top + window.scrollY - offset;
-    document.getElementById(id).scrollIntoView({top:y, behavior: "smooth" });
-  };
+  const y = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+  window.scrollTo({ top: y, behavior: "smooth" });
+};
 
   return (
     <nav className={`navbar ${true ? 'show' : ''}`}>

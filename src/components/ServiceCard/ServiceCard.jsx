@@ -15,13 +15,14 @@
 // export default ServiceCard;
 
 import AnimatedText from '../AnimatedText';
+import TextReveal from '../TextReveal';
 import './ServiceCard.css';
 import { GiCheckMark } from "react-icons/gi";
 
 function ServiceCard({ iconSrc, name, description }) {
   return (
     <div>
-    <AnimatedText>
+    {/* <AnimatedText> */}
     <div className="service-box">
       <div className="icon-circle">
         {/* <img src={iconSrc} alt="icon" className="icon-image" /> */}
@@ -30,11 +31,16 @@ function ServiceCard({ iconSrc, name, description }) {
       <div className="name-text">{name}</div>
       <div className="desc-text">
         <GiCheckMark className='desc-icon'/>
-              
-                {description}
+        <TextReveal
+        as="p"
+        text={description}
+        type="wave"
+        delay={0.04}
+        className="highlight-text"
+      />
     </div>
     </div>
-    </AnimatedText>
+    {/* </AnimatedText> */}
     </div>
   );
 }
