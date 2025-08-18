@@ -1,20 +1,3 @@
-// import './ServiceCard.css';
-
-// function ServiceCard({ icon, title, description }) {
-//   return (
-//     <div className="service-card">
-//       <div className="service-icon">
-//         <img src={icon} alt={`${title} icon`} />
-//       </div>
-//       <h3 className="service-title">{title}</h3>
-//       <p className="service-description">{description}</p>
-//     </div>
-//   );
-// }
-
-// export default ServiceCard;
-
-import AnimatedText from '../AnimatedText';
 import TextReveal from '../TextReveal';
 import './ServiceCard.css';
 import { GiCheckMark } from "react-icons/gi";
@@ -22,10 +5,8 @@ import { GiCheckMark } from "react-icons/gi";
 function ServiceCard({ iconSrc, name, description }) {
   return (
     <div>
-    {/* <AnimatedText> */}
     <div className="service-box">
       <div className="icon-circle">
-        {/* <img src={iconSrc} alt="icon" className="icon-image" /> */}
         <div className="icon-image">{iconSrc}</div>
       </div>
       <div className="name-text">{name}</div>
@@ -39,7 +20,6 @@ function ServiceCard({ iconSrc, name, description }) {
       />
     </div>
     </div>
-    {/* </AnimatedText> */}
     </div>
   );
 }

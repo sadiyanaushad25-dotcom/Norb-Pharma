@@ -1,7 +1,9 @@
 import ServiceCard from '../components/ServiceCard/ServiceCard'
-import AnimatedText from "../components/AnimatedText";
 import { service1, service2, service3, service4 } from '../constants/keywords';
-import { MdScience } from "react-icons/md";
+import { HiBuildingOffice } from "react-icons/hi2";
+import { FaTachographDigital } from "react-icons/fa6";
+import { HiTruck } from "react-icons/hi2";
+import { FaFileSignature } from "react-icons/fa";
 import './Services.css'
 import TextReveal from '../components/TextReveal';
 
@@ -19,22 +21,22 @@ export default function Services() {
       />
         <section className='service-cards'>
         <ServiceCard
-          iconSrc={<MdScience />}
+          iconSrc={<HiBuildingOffice size={35} />}
           name=""
           description={service1}
         />         
         <ServiceCard
-          iconSrc={<MdScience />}
+          iconSrc={<FaTachographDigital size={35} />}
           name=""
           description={service2}
-        />     
+        />    
         <ServiceCard
-          iconSrc={<MdScience />}
+          iconSrc={<HiTruck size={35} />}
           name=""
           description={service3}
         />
         <ServiceCard
-          iconSrc={<MdScience />}
+          iconSrc={<FaFileSignature size={35} />}
           name=""
           description={service4}
         />

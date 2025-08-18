@@ -2,38 +2,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem 0rem 1.5rem;
+  background-color: rgba(26, 22, 10, 0.708);
+  border: 1px solid rgba(255, 215, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  height: 15rem;
+  height: 16rem;
   margin: auto;
   border-radius: 8px;
 }
 
 .service-box:hover {
-    transform: translateY(-7px); 
+    transform: translateY(-5px); 
     backdrop-filter: blur(1px) ;
     cursor: pointer;
     border: 1px solid rgba(255, 215, 0, 0.2);
-    box-shadow: 0 8px 20px rgba(255, 244, 180, 0.2); 
-
+    box-shadow: 0px 0px 100px rgb(13, 11, 7),  0px 0px 50px rgba(63, 51, 27, 0.911); 
 }
 
 .icon-circle {
-  background: radial-gradient(circle, #FFD700, #ffffffb4);
+  background: #FFD700;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  overflow: hidden;
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+  border: 1px solid white;
   margin-bottom: 1rem;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .icon-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  color: #1C1C1C;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }
 
 .name-text {
@@ -61,7 +64,7 @@
 
 
 .service-box:hover .name-text {
-  color: #e5c100; /* darker rgb(183, 176, 71) */
+  color: #e5c100;
   font-weight: 400;
 }
 
