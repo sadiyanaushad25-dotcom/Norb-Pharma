@@ -36,7 +36,6 @@ function ServiceCard({ iconSrc, name, description }) {
         text={description}
         type="wave"
         delay={0.04}
-        className="highlight-text"
       />
     </div>
     </div>

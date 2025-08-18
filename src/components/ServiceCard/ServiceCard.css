@@ -4,21 +4,19 @@
   align-items: center;
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.2);
-  /* backdrop-filter: blur(10px); */
-  /* box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);  */
   transition: transform 0.3s ease-in-out;
-  width: 10.2rem;
   height: 15rem;
   margin: auto;
   border-radius: 8px;
 }
 
 .service-box:hover {
-  /* transform: translateY(-5px);  */
-    max-width: 11.4rem;
-    transform: scale(1.1);
+    transform: translateY(-7px); 
+    backdrop-filter: blur(1px) ;
     cursor: pointer;
     border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(255, 244, 180, 0.2); 
+
 }
 
 .icon-circle {

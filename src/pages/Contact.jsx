@@ -9,8 +9,8 @@ import TextReveal from "../components/TextReveal";
 
 export default function Contact() {
   return (
-    <div id="contact" style={{margin:"2rem 4rem", position: "relative", overflow:"hidden"}}>
-      <AnimatedText>
+    <div id="contact" style={{margin:"2rem 4rem", position: "relative"}}>
+      {/* <AnimatedText> */}
       <section className="contact-section">
       <div className="contact-left">
         <TextReveal
@@ -53,7 +53,6 @@ export default function Contact() {
         </iframe>
       </div>
     </section>
-     </AnimatedText>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 .contact-section {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   padding: 2rem 4rem;
   margin-top: 5rem;
   background-color: #0d0d0d;
@@ -9,7 +8,7 @@
   font-family: 'Segoe UI', sans-serif;
   flex-wrap: wrap;
   gap: 3rem;
-  min-width: 60vw;
+  /* min-width: 60vw; */
 }
 
 .contact-left {
@@ -66,4 +65,10 @@
   max-width: 400px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+@media (max-width: 510px) {
+  .contact-right {
+    display: none;
+  }
 }

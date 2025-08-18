@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import AnimatedSection from "./components/AnimatedSection";
-
+import "./App.css"
 function App() {
 
   return (
@@ -29,10 +29,12 @@ function App() {
         position:"sticky",
         top:"1.7rem",
       }}> */}
+      <section className="responsive-section">
       <AnimatedSection id="home"><Home /></AnimatedSection>
       <AnimatedSection id="about"><About /></AnimatedSection>
       <AnimatedSection id="services"><Services /></AnimatedSection>
       <AnimatedSection id="contact"><Contact /></AnimatedSection>
+      </section>
       {/* </section> */}
     </div>
   );
