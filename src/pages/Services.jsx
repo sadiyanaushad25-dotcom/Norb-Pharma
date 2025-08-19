@@ -1,5 +1,5 @@
 import ServiceCard from '../components/ServiceCard/ServiceCard'
-import { service1, service2, service3, service4 } from '../constants/keywords';
+import { service1, service2, service3, service4, vision } from '../constants/keywords';
 import { HiBuildingOffice } from "react-icons/hi2";
 import { FaTachographDigital } from "react-icons/fa6";
 import { HiTruck } from "react-icons/hi2";
@@ -19,6 +19,7 @@ export default function Services() {
         delay={0.04}
         className="services-wrapper-h2"
       />
+      <p className='vision'>{vision}</p>
         <section className='service-cards'>
         <ServiceCard
           iconSrc={<HiBuildingOffice size={35} />}
