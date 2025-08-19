@@ -4,9 +4,27 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import LoadingPage from "./pages/LoadingPage";
 import AnimatedSection from "./components/AnimatedSection";
 import "./App.css"
+import { useEffect, useState } from "react";
 function App() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+  setLoading(false);
+  }, 2900);
+
+
+  return () => clearTimeout(timer);
+  }, []);
+
+
+  if (loading) {
+    return <LoadingPage />;
+  }
 
   return (
     <div>
@@ -17,25 +35,12 @@ function App() {
       <Navbar />
 
       {/* Sections */}
-      {/* <section 
-      style={{
-        marginTop:"2rem", 
-        zIndex:"2",
-        // backgroundColor:"pink", 
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"center", 
-        alignItems:"flex-start",
-        position:"sticky",
-        top:"1.7rem",
-      }}> */}
       <section className="responsive-section">
       <AnimatedSection id="home"><Home /></AnimatedSection>
       <AnimatedSection id="about"><About /></AnimatedSection>
       <AnimatedSection id="services"><Services /></AnimatedSection>
       <AnimatedSection id="contact"><Contact /></AnimatedSection>
       </section>
-      {/* </section> */}
     </div>
   );
 }
