@@ -1,20 +1,87 @@
-/* .home_wrapper{
-    margin: 2px 2rem;
-    max-width: 10vw;
-    text-wrap: nowrap;
-} */
-/* .landing_page_heading{
-    color: rgb(0, 173, 181);
-} */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Qwitcher+Grypen:wght@400;700&display=swap');
+.landing-container {
+  min-height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: aliceblue;
+  padding: 1rem;
+  text-align: center;
+}
 
-/* @media (min-width: 768px) { md breakpoint */
-  /* .home_wrapper{
-    max-width: 70vw;
-  }
-} */
+.hero-heading {
+  font-family: "Indie Flower", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(183, 176, 71);
+  margin: 0;
+}
 
-/* @media (min-width: 1024px) { lg breakpoint */
-  /* .home_wrapper{
-    max-width: 50vw;
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 3rem;
   }
-} */
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  margin-top: 0;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .hero-tagline {
+    font-size: 1.25rem;
+  }
+}
+
+.divider {
+  margin-top: 1.5rem;
+  height: 3px;
+  width: 10rem;
+  background-color: rgb(183, 176, 71);
+  transform-origin: left;
+}
+
+.cta-btn {
+    font-family: "Qwitcher Grypen", cursive;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.circle-bg {
+  position: absolute;
+  margin-top: 0.5rem;
+  width: 90%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(183,176,71,0.2), #2e3171);
+  /* background: radial-gradient(circle, rgba(183,176,71,0.2), transparent); */
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.particle.light {
+  background-color: aliceblue;
+}
+
+.particle.gold {
+  background-color: rgb(183, 176, 71);
+}
