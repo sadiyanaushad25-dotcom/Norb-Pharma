@@ -22,22 +22,22 @@ export default function Services() {
       <p className='vision'>{vision}</p>
         <section className='service-cards'>
         <ServiceCard
-          iconSrc={<HiBuildingOffice size={35} />}
+          iconSrc={<HiBuildingOffice size={25} />}
           name=""
           description={service1}
         />         
         <ServiceCard
-          iconSrc={<FaTachographDigital size={35} />}
+          iconSrc={<FaTachographDigital size={25} />}
           name=""
           description={service2}
         />    
         <ServiceCard
-          iconSrc={<HiTruck size={35} />}
+          iconSrc={<HiTruck size={25} />}
           name=""
           description={service3}
         />
         <ServiceCard
-          iconSrc={<FaFileSignature size={35} />}
+          iconSrc={<FaFileSignature size={25} />}
           name=""
           description={service4}
         />
