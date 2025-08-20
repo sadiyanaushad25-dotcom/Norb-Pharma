@@ -9,12 +9,13 @@
   height: 16rem;
   margin: auto;
   border-radius: 8px;
+  cursor: context-menu;
 }
 
 .service-box:hover {
     transform: translateY(-7px); 
     backdrop-filter: blur(1px) ;
-    cursor: pointer;
+    /* cursor: pointer; */
     border: 1px solid rgba(204, 200, 176, 0.84);
     box-shadow: 2px 2px 8px rgb(255, 255, 255, 0.1);
 }
