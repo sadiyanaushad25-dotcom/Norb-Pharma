@@ -13,6 +13,6 @@ export const MAP_LOCATION = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3
 export const vision = "We don't just navigate the registration process— we master it,ensuring every medical device, pharmaceutical product, drugstore, and scientific office establishment moves from concept to market authorization with unparalleled precision and efficiency.";
 export const landing_page_1 = "Your regulatory partner, turning compliance into success.";
 export const landing_page_2 = "Seamless Regulatory Compliance for Medical Devices & Pharmaceuticals";
-export const landing_page_3 = "Norb stands as your trusted partner in healthcare advancement— where experience meets innovation, and regulatory success is not just a promised, but delivered.";
+export const landing_page_3 = "Norb stands as your trusted partner in healthcare advancement— where experience meets innovation, and regulatory success is not just promised, but delivered.";
 export const landing_page_4 = "Your Innovation. Our Expertise. Seamless Results.";
 export const hero_heading = "Seamless Regulatory Compliance for Medical Devices & Pharmaceuticals";
