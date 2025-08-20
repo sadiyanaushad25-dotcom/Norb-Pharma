@@ -67,6 +67,11 @@
   color: rgb(183, 176, 71);
 }
 
+.navbar-links button.active {
+  color: rgb(238,224,122);
+  font-weight: bold;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
