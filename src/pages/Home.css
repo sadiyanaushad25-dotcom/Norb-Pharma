@@ -1,12 +1,11 @@
 .landing-container {
-  min-height: 70vh;
+  min-height: 78vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 1rem;
-  text-align: center;
 }
 
 .hero-heading {
@@ -15,7 +14,7 @@
   font-weight: 600;
   color: rgb(156, 156, 158);
   text-align: justify;
-  margin-left: 4rem ;
+  margin-left: 4rem;
   margin-bottom: 0;
 }
 
@@ -40,7 +39,7 @@
   margin-left: -40px;
   height: 3px;
   width: 11rem;
-  background-color:rgb(156, 156, 158);
+  background-color: rgb(156, 156, 158);
   transform-origin: left;
   margin: 0 auto;
   padding-left: -10rem;
@@ -66,7 +65,7 @@
   width: 90%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(183,176,71,0.2), #2e3171);
+  background: radial-gradient(circle, rgba(183, 176, 71, 0.2), #2e3171);
   /* background: radial-gradient(circle, rgba(183,176,71,0.2), transparent); */
   z-index: 0;
 }
@@ -93,12 +92,40 @@
 }
 
 @media (max-width: 768px) {
+  .landing-container {
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.9rem 5rem;
+  }
+
   .hero-heading {
     margin-left: 0;
     padding: 0;
-  }  
+    line-height: 1.4;
+  }
+
   .hero-tagline {
     margin-left: -0.5rem;
     padding: 0;
+  }
+}
+
+@media (max-width: 510px) {
+  .landing-container {
+    gap: 0;
+  }
+
+  .hero-heading {
+    line-height: 1;
+  }
+
+  .hero-tagline {
+    margin-left: -0.5rem;
+    padding: 0;
+  }
+
+  .cta-btn {
+    padding: 0.5rem;
   }
 }

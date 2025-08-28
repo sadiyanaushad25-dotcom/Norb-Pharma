@@ -3,14 +3,9 @@ import { useEffect, useState } from "react";
 import WordReveal from '../components/WordReveal';
 
 import "./Home.css";
-import { hero_heading, landing_page_2, landing_page_3, landing_page_4 } from "../constants/keywords";
+import { hero_heading, landing_page_3, landing_page_4 } from "../constants/keywords";
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <div className="landing-container">
