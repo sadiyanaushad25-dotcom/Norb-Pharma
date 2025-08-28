@@ -6,25 +6,32 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import LoadingPage from "./pages/LoadingPage";
 import AnimatedSection from "./components/AnimatedSection";
-import "./App.css"
 import { useEffect, useState } from "react";
+import { useProgress } from "@react-three/drei";
+import "./App.css"
+
 function App() {
+  const { progress, loaded } = useProgress(); // Track DNA loading
+  const [ready, setReady] = useState(false);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-  const timer = setTimeout(() => {
-  setLoading(false);
-  }, 2500);
-
-
-  return () => clearTimeout(timer);
+    useEffect(() => {
+    // Preload via JS
+    const img = new Image();
+    img.src = "/public/engin-akyurt-Ya-IIca3PjM-unsplash.jpg";
   }, []);
 
+  useEffect(() => {
+    if (loaded) {
+      const timer = setTimeout(() => setReady(true), 900);
+      return () => clearTimeout(timer);
+    }
+  }, [loaded]);
 
-  // if (loading) {
-  //   return <LoadingPage />;
-  // }
+  if (!ready) {
+    return (
+      <LoadingPage progress={progress}/>
+    );
+  }
 
   return (
     <div>

@@ -31,7 +31,7 @@ function Model({ scroll, ...props }) {
       scroll.current = window.scrollY / (document.body.scrollHeight - window.innerHeight)
     }
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // init
+    handleScroll()
 
     return () => window.removeEventListener("scroll", handleScroll)
   }, [actions])
@@ -39,7 +39,6 @@ function Model({ scroll, ...props }) {
     if (scene) {
       scene.traverse((child) => {
         if (child.isMesh) {
-          // Make the material gray
           child.material.color = new THREE.Color("rgba(7, 7, 7, 1)")
 
           child.material.roughness = 0.5
@@ -115,9 +114,10 @@ export default function Background3D({ scroll }) {
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    window.addEventListener("resize", checkMobile)
+    // window.addEventListener("resize", checkMobile)
     checkMobile()
-    return () => window.removeEventListener("resize", checkMobile)
+    return () => {}
+    // window.removeEventListener("resize", checkMobile)
   }, [])
 
   return (
