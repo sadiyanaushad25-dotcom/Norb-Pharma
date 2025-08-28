@@ -36,7 +36,7 @@ export default function Navbar() {
 
   useEffect(() => {
     updateOffsets();
-    window.addEventListener("resize", updateOffsets);
+    // window.addEventListener("resize", updateOffsets);
     window.addEventListener("load", updateOffsets);
 
     let ticking = false;
@@ -63,7 +63,7 @@ export default function Navbar() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", updateOffsets);
+      // window.removeEventListener("resize", updateOffsets);
       window.removeEventListener("load", updateOffsets);
     };
   }, []);
