@@ -12,8 +12,6 @@
       linear-gradient(336deg, rgba(35, 36, 37, 0.8), transparent 70.71%),
       /* url("/pawel-czerwinski-FCB0X2y19M8-unsplash.jpg"); */
       url("/public/engin-akyurt-Ya-IIca3PjM-unsplash.jpg");
-    background-repeat: "repeat";
-    background-size: "contain";
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
 }
