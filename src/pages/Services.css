@@ -14,11 +14,12 @@
 .services-wrapper-h2{
   font-size: 2rem;
   margin-bottom: 0;
-  color: rgb(183, 176, 71);
+  color: rgb(156, 156, 158);
+  font-family: "Cinzel", serif;;
 }
 
 .vision{
-  color: aliceblue;
+  color: rgb(80, 80, 83);
   font-size: 1.1rem;
   margin-bottom: 2rem;
   margin-top: 0;

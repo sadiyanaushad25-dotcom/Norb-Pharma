@@ -3,37 +3,21 @@ import { motion } from "framer-motion";
 export default function WordReveal({
   text,
   type = "wave",
-  delay = 0.05,
+  delay = 5,
   as: Tag = "span", 
   className = "",
   style = {}
 }) {
   // Animation variants
   const variantsMap = {
-    wave: {
-      hidden: { y: "100%", opacity: 0 },
-      visible: (i) => ({
-        y: [0, -8, 0],
-        opacity: 1,
-        transition: { delay: i * delay, duration: 1, ease: "easeOut" }
-      }),
-    },
     waterfall: {
       hidden: { y: "-100%", opacity: 0 },
       visible: (i) => ({
         y: 0,
         opacity: 1,
-        transition: { delay: i * delay, duration: 0.8, ease: "easeOut" }
+        transition: { delay: i * delay, duration: 1, ease: "easeOut" }
       }),
     },
-    reverse: {
-      hidden: { y: "100%", opacity: 0 },
-      visible: (i) => ({
-        y: 0,
-        opacity: 1,
-        transition: { delay: i * delay, duration: 0.8, ease: "easeOut" }
-      }),
-    }
   };
 
   const selectedVariant = variantsMap[type] || variantsMap.wave;

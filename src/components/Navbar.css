@@ -47,9 +47,14 @@
   font-size: 2rem;
   background: none;
   border: none;
-  color: aliceblue;
+  color: rgb(238,224,122);
   margin-left: 1rem;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transition: display 0.3s ease-in-out ;
 }
 
 .navbar-links button {
@@ -78,24 +83,36 @@
     display: block;
   }
   .navbar-links {
+    z-index: 1;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 0;
+    right: 0;
     width: 100%;
-    background-color: rgba(23, 20, 11, 0.95);
+    background-color: rgba(60, 60, 60, 0.708);
     display: flex;
     flex-direction: column;
     align-items: center;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: min-height 1s ease;
   }
   .navbar.open .navbar-links {
-    max-height: 300px;
-    padding: 1rem 0;
+    max-width: 60%;
+    min-height: 100vh;
+    padding: 10rem 0;
   }
   .navbar-links button {
     margin: 0.5rem 0;
     font-size: 1.2rem;
+    outline: none;
+    border: none;
+  }
+
+  .menu-toggle:focus,
+  .menu-toggle:active,
+  .menu-toggle:hover {
+    border: none;
+    outline: none;
+    box-shadow: none;
   }
 }

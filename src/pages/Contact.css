@@ -5,10 +5,8 @@
   margin-top: 5rem;
   background-color: #0d0d0d;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
   flex-wrap: wrap;
   gap: 3rem;
-  /* min-width: 60vw; */
 }
 
 .contact-left {
@@ -20,9 +18,10 @@
 }
 
 .contact-title {
+  font-family: "Cinzel", serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: rgb(183, 176, 71);
+  color: rgb(156, 156, 158);
   margin-bottom: 2rem;
   letter-spacing: 1px;
   position: relative;

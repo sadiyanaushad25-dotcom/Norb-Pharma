@@ -22,14 +22,14 @@ function App() {
   }, []);
 
 
-  if (loading) {
-    return <LoadingPage />;
-  }
+  // if (loading) {
+  //   return <LoadingPage />;
+  // }
 
   return (
     <div>
       {/* 3D Background */}
-      <Background3D />
+      <Background3D scroll= {scroll}/>
 
       {/* Navbar */}
       <Navbar />

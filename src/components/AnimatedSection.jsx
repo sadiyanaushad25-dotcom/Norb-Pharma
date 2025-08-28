@@ -19,7 +19,7 @@ const sectionVariants = {
 
 const AnimatedSection = ({ children, id }) => {
   const [ref, inView] = useInView({
-    rootMargin: "-50% 0px -50% 0px", // trigger near center
+    // rootMargin: "-50% 0px -50% 0px", // trigger near center
     triggerOnce: false,
   });
 

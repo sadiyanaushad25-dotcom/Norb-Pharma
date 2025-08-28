@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1rem 1.5rem 0rem 1.5rem;
   background-color: rgba(25, 27, 31, 0.874);
-  border: 1px solid rgba(211, 207, 186, 0.2);
+  border: 1px solid rgba(211, 205, 205, 0.721);
   transition: transform 0.3s ease-in-out;
   height: 16rem;
   margin: auto;
@@ -21,11 +21,10 @@
 }
 
 .icon-circle {
-  background: #9d7e2f;
+  background: #c9a036;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border: 5px solid #9c740c;
   margin-bottom: 1rem;
   transition: all 0.2s ease-in-out;
 }
@@ -33,14 +32,14 @@
 .icon-image {
   width: 100%;
   height: 105%;
-  color: #decc87;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .name-text {
-  color: rgb(183, 176, 71);
+  color: rgb(139, 134, 54);
   font-size: 1.2rem;
   font-weight: 550;
   margin-bottom: 0.5rem;
@@ -51,7 +50,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  color: #ccc;
+  color: rgb(156, 156, 158);
   font-size: 0.95rem;
   text-align: center;
 }

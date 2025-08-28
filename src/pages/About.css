@@ -5,18 +5,18 @@
   text-align: center;
 }
 
-/* .team-header h2 { */
 .team-header-h2{
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: rgb(183, 176, 71);
+  color: rgb(156, 156, 158);
+  font-family: "Cinzel", serif;
 }
 
 .team-header p {
   max-width: 90%;
   margin: 0 auto 2rem;
   font-size: 1rem;
-  color: aliceblue;
+  color:rgb(80, 80, 83);
 }
 
 .team-grid {
@@ -47,10 +47,11 @@
   border-radius: 50%;
 }
 
-.team-card h3 {
+.team-names {
   margin: 0.5rem 0 0.2rem;
   font-size: 1.1rem;
-  color: aliceblue;
+  color:rgb(156, 156, 158);
+  font-family: "Cinzel", serif;
 }
 
 .team-card p {

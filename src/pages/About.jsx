@@ -1,3 +1,4 @@
+import {about_us} from "../constants/keywords"
 import TextReveal from "../components/TextReveal";
 import './About.css'
 
@@ -8,8 +9,7 @@ export default function About() {
   { name: "Gowher Mirza", degree: "Mechanical Engineer & DG certified" },
 ];
   return (
-    <div style={{ color: "#fff", position: "relative" }}>
-      
+    <div>
     <section className="team-intro"  id="about">
       <div className="team-header">
         <TextReveal
@@ -21,10 +21,7 @@ export default function About() {
       />
 
         <p>
-          With over 15 years of experience in handling registrations and
-          navigating regulations, we’ve built a track record of success that
-          speaks for itself. But behind every achievement is a dedicated team
-          committed to getting things right.
+          {about_us}
         </p>
       </div>
 
@@ -39,14 +36,13 @@ export default function About() {
                 text={emp.name}
                 type="wave"
                 delay={0.08}
-                className="highlight-text"
+                className="team-names"
               />
             <p>{emp.degree}</p>
           </div>
         ))}
       </div>
-    </section>
-      
+    </section>  
     </div>
   );
 }

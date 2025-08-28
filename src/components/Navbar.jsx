@@ -6,32 +6,50 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const navbarRef = useRef(null);
+  const sectionOffsets = useRef({});
+
+  const sections = ["home", "about", "services", "contact"];
+
+  const updateOffsets = () => {
+    const offsets = {};
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) {
+        offsets[id] = {
+          top: el.offsetTop,
+          bottom: el.offsetTop + el.offsetHeight,
+        };
+      }
+    });
+    sectionOffsets.current = offsets;
+  };
 
   const scrollToSection = (id) => {
     const navbarHeight = navbarRef.current?.offsetHeight || 0;
     const element = document.getElementById(id);
     if (!element) return;
-    const y = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    const y = element.offsetTop - navbarHeight;
     window.scrollTo({ top: y, behavior: "smooth" });
     setActiveSection(id);
     setMenuOpen(false);
   };
 
   useEffect(() => {
+    updateOffsets();
+    window.addEventListener("resize", updateOffsets);
+    window.addEventListener("load", updateOffsets);
+
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const sections = ["home", "about", "services", "contact"];
           const navbarHeight = navbarRef.current?.offsetHeight || 0;
+          const scrollPos = window.scrollY + navbarHeight + 50;
 
           const current = sections.find((id) => {
-            const el = document.getElementById(id);
-            if (el) {
-              const rect = el.getBoundingClientRect();
-              return rect.top <= navbarHeight + 50 && rect.bottom >= navbarHeight + 50;
-            }
-            return false;
+            const range = sectionOffsets.current[id];
+            if (!range) return false;
+            return scrollPos >= range.top && scrollPos <= range.bottom;
           });
 
           if (current) setActiveSection(current);
@@ -42,7 +60,12 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateOffsets);
+      window.removeEventListener("load", updateOffsets);
+    };
   }, []);
 
   return (
@@ -54,12 +77,12 @@ export default function Navbar() {
           <span className="logo-line-2">PHARMA</span>
         </div>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          &#9776;
+          {menuOpen ? "X" : "☰"}
         </button>
       </div>
 
       <div className="navbar-links">
-        {["home", "about", "services", "contact"].map((id) => (
+        {sections.map((id) => (
           <button
             key={id}
             className={activeSection === id ? "active" : ""}
