@@ -18,7 +18,7 @@ function App() {
     useEffect(() => {
     // Preload via JS
     const img = new Image();
-    img.src = "/public/background.jpg";
+    img.src = "/background.jpg";
   }, []);
 
   useEffect(() => {

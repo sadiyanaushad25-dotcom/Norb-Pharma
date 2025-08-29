@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "/public/logo.png";
+import logo from "/logo.png";
 import "./LoadingPage.css";
 
 export default function LoadingPage({ progress, isDone }) {
