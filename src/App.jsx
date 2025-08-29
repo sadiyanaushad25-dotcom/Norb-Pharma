@@ -8,6 +8,7 @@ import LoadingPage from "./pages/LoadingPage";
 import AnimatedSection from "./components/AnimatedSection";
 import { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
+import { LayoutGroup  } from "framer-motion";
 import "./App.css"
 
 function App() {
@@ -17,24 +18,21 @@ function App() {
     useEffect(() => {
     // Preload via JS
     const img = new Image();
-    img.src = "/public/engin-akyurt-Ya-IIca3PjM-unsplash.jpg";
+    img.src = "/public/background.jpg";
   }, []);
 
   useEffect(() => {
     if (loaded) {
-      const timer = setTimeout(() => setReady(true), 900);
+      const timer = setTimeout(() => setReady(true), 700);
       return () => clearTimeout(timer);
     }
   }, [loaded]);
 
-  if (!ready) {
-    return (
-      <LoadingPage progress={progress}/>
-    );
-  }
-
   return (
+    <LayoutGroup >
     <div>
+      <LoadingPage progress={progress} isDone={ready} />
+
       {/* 3D Background */}
       <Background3D scroll= {scroll}/>
 
@@ -49,6 +47,7 @@ function App() {
       <AnimatedSection id="contact"><Contact /></AnimatedSection>
       </section>
     </div>
+    </LayoutGroup >
   );
 }
 

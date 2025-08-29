@@ -21,7 +21,7 @@ export default function Home() {
         as="p"
         text={hero_heading}
         type="waterfall"
-        delay={0.04}
+        delay={0.1}
       />
       </motion.h1>
       <p className="hero-tagline">{landing_page_3}</p>

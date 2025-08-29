@@ -1,4 +1,5 @@
 import logo from '/logo.png';
+import { motion } from "framer-motion";
 import './Navbar.css';
 import { useState, useEffect, useRef } from 'react';
 
@@ -71,7 +72,7 @@ export default function Navbar() {
   return (
     <nav ref={navbarRef} className={`navbar ${menuOpen ? 'open' : ''}`}>
       <div className="navbar-left">
-        <img src={logo} alt="Logo" className="logo" />
+        <motion.img src={logo} alt="Logo" layoutId="app-logo" className="logo" />
         <div className="brand">
           <span className="logo-line-1">NORB</span>
           <span className="logo-line-2">PHARMA</span>
