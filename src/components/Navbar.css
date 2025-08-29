@@ -51,7 +51,7 @@
   margin-left: 1rem;
   cursor: pointer;
   position: absolute;
-  top: 0;
+  top: 15;
   right: 0;
   z-index: 2;
   transition: display 0.3s ease-in-out ;
@@ -86,20 +86,21 @@
     z-index: 1;
     position: absolute;
     top: 0;
-    right: 0;
-    width: 100%;
-    background-color: rgba(60, 60, 60, 0.708);
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(45, 43, 43, 0.573);
+    box-shadow: inset 1px 1px 10px rgb(156, 156, 158);
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: min-height 1s ease;
+    gap: 2rem;
+    transition: right 0.5s ease;
   }
   .navbar.open .navbar-links {
     max-width: 60%;
-    min-height: 100vh;
-    padding: 10rem 0;
+    right: 0;
+    padding: 5rem 0;
   }
   .navbar-links button {
     margin: 0.5rem 0;
