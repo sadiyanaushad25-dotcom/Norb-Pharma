@@ -1,4 +1,4 @@
-import logo from '/logo.png';
+import logo from '/public/logo.png';
 import { motion } from "framer-motion";
 import './Navbar.css';
 import { useState, useEffect, useRef } from 'react';
