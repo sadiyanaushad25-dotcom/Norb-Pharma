@@ -6,7 +6,7 @@ import { Html } from "@react-three/drei"
 
 function Model({ scroll, ...props }) {
   const group = useRef()
-  const { scene, animations } = useGLTF("public/dna_animation.glb")
+  const { scene, animations } = useGLTF("/public/dna_animation.glb")
   const { actions } = useAnimations(animations, scene)
 
   // console.log("SCENE: ", scene)
@@ -107,7 +107,7 @@ function Model({ scroll, ...props }) {
   )
 }
 
-useGLTF.preload("public/dna_animation.glb")
+useGLTF.preload("/public/dna_animation.glb")
 
 export default function Background3D({ scroll }) {
   const [isMobile, setIsMobile] = useState(false)
