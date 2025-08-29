@@ -31,6 +31,7 @@ function App() {
   return (
     <LayoutGroup >
     <div>
+      {/* Loading Page */}
       <LoadingPage progress={progress} isDone={ready} />
 
       {/* 3D Background */}
