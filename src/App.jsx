@@ -43,9 +43,9 @@ function App() {
       {/* Sections */}
       <section className="responsive-section">
       <AnimatedSection id="home"><Home /></AnimatedSection>
-      {/* <AnimatedSection id="about"><About /></AnimatedSection>
+      <AnimatedSection id="about"><About /></AnimatedSection>
       <AnimatedSection id="services"><Services /></AnimatedSection>
-      <AnimatedSection id="contact"><Contact /></AnimatedSection> */}
+      <AnimatedSection id="contact"><Contact /></AnimatedSection>
       </section>
     </div>
     </LayoutGroup >
