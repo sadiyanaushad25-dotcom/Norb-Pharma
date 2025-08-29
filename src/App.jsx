@@ -34,7 +34,7 @@ function App() {
       <LoadingPage progress={progress} isDone={ready} />
 
       {/* 3D Background */}
-      <Background3D scroll= {scroll}/>
+      {/* <Background3D scroll= {scroll}/> */}
 
       {/* Navbar */}
       <Navbar />
