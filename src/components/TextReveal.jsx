@@ -50,11 +50,12 @@
 // }
 
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function TextReveal({
   text,
   type = "wave",
-  delay = 0.05,
+  delay = 0,
   as: Tag = "span", // element type (default span)
   className = "",
   style = {}
@@ -88,17 +89,23 @@ export default function TextReveal({
   };
 
   const selectedVariant = variantsMap[type] || variantsMap.wave;
+    const [ref, inView] = useInView({
+    // rootMargin: "-50% 0px -50% 0px", // trigger near center
+    triggerOnce: false,
+  });
 
   return (
-    <Tag className={className} style={{ display: "inline-block", ...style }}>
+    <Tag className={className} style={{ display: "inline-block",willChange: "transform, opacity", ...style }}>
       {text.split("").map((char, i) => (
         <motion.span
+        ref={ref}
           key={i}
           style={{ display: "inline-block", overflow: "hidden" }}
           custom={i}
           initial="hidden"
         //   animate="visible"
-                  whileInView="visible"
+                  // whileInView="visible"
+                  animate={inView ? "visible" : "hidden"}
           viewport={{ once: true, amount: 0.5 }}
           variants={selectedVariant}
         >

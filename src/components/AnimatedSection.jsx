@@ -29,13 +29,14 @@ const AnimatedSection = ({ children, id }) => {
       ref={ref}
       variants={sectionVariants}
       initial="hidden"
-      animate={inView ? "visible" : "exit"}
+      animate={inView ? "visible" : "hidden"}
       style={{
         // minHeight: "60vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         marginTop: "3rem",
+        willChange: "transform, opacity",
       }}
     >
       {children}

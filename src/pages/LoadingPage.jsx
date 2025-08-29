@@ -18,6 +18,7 @@ export default function LoadingPage({ progress, isDone }) {
             alt="Logo"
             className="loading-logo"
             animate={{ rotate: 360 }}
+            // delay={0}
             transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
             layoutId="app-logo"
           />
@@ -38,7 +39,7 @@ export default function LoadingPage({ progress, isDone }) {
               className="progress-bar"
               initial={{ width: "0%" }}
               animate={{ width: `${Math.round(progress)}%` }}
-              transition={{ ease: "easeOut", duration: 0.3 }}
+              transition={{ ease: "easeOut", duration: 1.5 }}
             />
           </motion.div>
           <p className="progress-text">{Math.round(progress)}%</p>
