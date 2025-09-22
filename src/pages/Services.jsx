@@ -1,6 +1,5 @@
 import ServiceCard from '../components/ServiceCard/ServiceCard'
 import { service1, service2, service3, service4, vision } from '../constants/keywords';
-import { motion } from "framer-motion";
 import { HiBuildingOffice } from "react-icons/hi2";
 import { FaTachographDigital } from "react-icons/fa6";
 import { HiTruck } from "react-icons/hi2";
@@ -8,6 +7,7 @@ import { FaFileSignature } from "react-icons/fa";
 import './Services.css'
 import TextReveal from '../components/TextReveal';
 import useIsMobile from '../Hooks/useIsMobile';
+import InfiniteScroll from '../components/InfiniteScroll/InfiniteScroll';
 
 export default function Services() {
   const isMobile = useIsMobile(768);
@@ -31,18 +31,13 @@ export default function Services() {
         className="services-wrapper-h2"
       />
       <p className='vision'>{vision}</p>
-      {isMobile ? 
-    <div className="mobile-services">
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={`service-box-mobile ${index < 2 ? "scroll-right" : "scroll-left"}`}
-        >
-          <div className="service-icon">{service.icon}</div>
-          <div className="service-text">{service.description}</div>
+      {isMobile ? (
+        <div style={{marginLeft:"-50px", marginRight:"-50px"}}>
+        <InfiniteScroll services={services.slice(0,2)} start="left" />
+        <br />
+        <InfiniteScroll services={services.slice(-2)} start="right" />
         </div>
-      ))}
-    </div>
+      )
       :
         <section className='service-cards'>
       {services.map((service, index) => (
