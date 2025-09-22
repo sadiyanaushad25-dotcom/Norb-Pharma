@@ -6,8 +6,19 @@ import { HiTruck } from "react-icons/hi2";
 import { FaFileSignature } from "react-icons/fa";
 import './Services.css'
 import TextReveal from '../components/TextReveal';
+import useIsMobile from '../Hooks/useIsMobile';
+import InfiniteScroll from '../components/InfiniteScroll/InfiniteScroll';
 
 export default function Services() {
+  const isMobile = useIsMobile(768);
+
+  const services = [
+    { icon: <HiBuildingOffice size={25} />, description: service1 },
+    { icon: <FaTachographDigital size={25} />, description: service2 },
+    { icon: <HiTruck size={25} />, description: service3 },
+    { icon: <FaFileSignature size={25} />, description: service4 },
+  ];
+
   return (
     <div id="services" style={{color: "#fff", position: "relative", overflow:'hidden' }}>
       <div className='services-wrapper'>
@@ -20,28 +31,25 @@ export default function Services() {
         className="services-wrapper-h2"
       />
       <p className='vision'>{vision}</p>
+      {isMobile ? (
+        <div style={{marginLeft:"-50px", marginRight:"-50px"}}>
+        <InfiniteScroll services={services.slice(0,2)} start="left" />
+        <br />
+        <InfiniteScroll services={services.slice(-2)} start="right" />
+        </div>
+      )
+      :
         <section className='service-cards'>
+      {services.map((service, index) => (
         <ServiceCard
-          iconSrc={<HiBuildingOffice size={25} />}
+          key={index}
+          iconSrc={service.icon}
           name=""
-          description={service1}
-        />         
-        <ServiceCard
-          iconSrc={<FaTachographDigital size={25} />}
-          name=""
-          description={service2}
-        />    
-        <ServiceCard
-          iconSrc={<HiTruck size={25} />}
-          name=""
-          description={service3}
+          description={service.description}
         />
-        <ServiceCard
-          iconSrc={<FaFileSignature size={25} />}
-          name=""
-          description={service4}
-        />
+      ))}
         </section>
+}
       </div>
     </div>
   );

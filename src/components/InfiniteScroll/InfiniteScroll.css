@@ -1,0 +1,60 @@
+.services-container {
+    overflow: hidden;
+    /* white-space: nowrap; */
+    width: 100%;
+}
+
+.services-track {
+    display: inline-flex;
+}
+
+.service-icon {
+    margin-top: 5px;
+    color: #fff;
+
+}
+
+.service-box-mobile {
+    color: rgb(156, 156, 158);
+    font-size: 0.95rem;
+    min-width: 200px;
+    max-width: 65vw;
+    margin: 0 20px;
+    padding: 20px;
+    border: 1px solid rgba(211, 205, 205, 0.721);
+    background-color: rgba(25, 27, 31, 0.874);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    flex-shrink: 0;
+}
+
+/* Animations */
+.right-left .services-track {
+    animation: moveLeft 20s linear infinite;
+}
+
+.left-right .services-track {
+    animation: moveRight 20s linear infinite;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
