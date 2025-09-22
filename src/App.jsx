@@ -9,8 +9,9 @@ import AnimatedSection from "./components/AnimatedSection";
 import { useEffect, useState } from "react";
 import { useProgress } from "@react-three/drei";
 import { LayoutGroup  } from "framer-motion";
-import { HelmetProvider } from "react-helmet-async";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./App.css"
+import FloatingIcon from "./components/whatsappIcon";
 
 function App() {
   const { progress, loaded } = useProgress(); // Track DNA loading
@@ -73,6 +74,7 @@ function App() {
       <AnimatedSection id="contact"><Contact /></AnimatedSection>
       </section>
     </div>
+    <FloatingIcon />
     </LayoutGroup >
     </HelmetProvider>
   );
