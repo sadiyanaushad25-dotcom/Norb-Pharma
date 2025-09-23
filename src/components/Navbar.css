@@ -57,7 +57,7 @@
   transition: display 0.3s ease-in-out ;
 }
 
-.navbar-links button {
+.link{
   background: none;
   border: none;
   color: aliceblue;
@@ -68,11 +68,11 @@
   outline: none;
 }
 
-.navbar-links button:hover {
+.link:hover {
   color: rgb(183, 176, 71);
 }
 
-.navbar-links button.active {
+.link.active {
   color: rgb(238,224,122);
   font-weight: bold;
 }
@@ -102,7 +102,7 @@
     right: 0;
     padding: 5rem 0;
   }
-  .navbar-links button {
+  .link {
     margin: 0.5rem 0;
     font-size: 1.2rem;
     outline: none;

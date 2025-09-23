@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://norb-pharma-l77j.vercel.app/sitemap.xml

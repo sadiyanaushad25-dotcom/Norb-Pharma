@@ -2,12 +2,14 @@ import logo from '/logo.png';
 import { motion } from "framer-motion";
 import './Navbar.css';
 import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const navbarRef = useRef(null);
   const sectionOffsets = useRef({});
+  const location = useLocation();
 
   const sections = ["home", "about", "services", "contact"];
 
@@ -35,9 +37,9 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
+  // detect scroll & update activeSection
   useEffect(() => {
     updateOffsets();
-    // window.addEventListener("resize", updateOffsets);
     window.addEventListener("load", updateOffsets);
 
     let ticking = false;
@@ -53,7 +55,16 @@ export default function Navbar() {
             return scrollPos >= range.top && scrollPos <= range.bottom;
           });
 
-          if (current) setActiveSection(current);
+          if (current) {
+            setActiveSection(current);
+
+            // push URL without reloading
+            const newPath = current === 'home' ? '/' : `/${current}`;
+            if (window.location.pathname !== newPath) {
+              window.history.replaceState({}, '', newPath);
+            }
+          }
+
           ticking = false;
         });
         ticking = true;
@@ -64,10 +75,15 @@ export default function Navbar() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      // window.removeEventListener("resize", updateOffsets);
       window.removeEventListener("load", updateOffsets);
     };
   }, []);
+
+  // 🔹 Whenever the URL changes, scroll to the section
+  useEffect(() => {
+    const path = location.pathname.replace('/', '') || 'home';
+    scrollToSection(path);
+  }, [location]);
 
   return (
     <nav ref={navbarRef} className={`navbar ${menuOpen ? 'open' : ''}`}>
@@ -83,15 +99,23 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-links">
-        {sections.map((id) => (
-          <button
-            key={id}
-            className={activeSection === id ? "active" : ""}
-            onClick={() => scrollToSection(id)}
-          >
-            {id === "about" ? "About Us" : id.charAt(0).toUpperCase() + id.slice(1)}
-          </button>
-        ))}
+        {sections.map((id) => {
+          const path = id === 'home' ? '/' : `/${id}`;
+          return (
+            <Link
+              key={id}
+              to={path}
+              className={activeSection === id ? "active link" : "link"}
+              onClick={(e) => {
+                e.preventDefault();
+                window.history.pushState({}, '', path);
+                scrollToSection(id);
+              }}
+            >
+              {id === "about" ? "About Us" : id.charAt(0).toUpperCase() + id.slice(1)}
+            </Link>
+          );
+        })}
       </div>
     </nav>
   );

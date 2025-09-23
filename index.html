@@ -37,23 +37,96 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "NORB Pharma",
-  "url": "https://norb-pharma-l77j.vercel.app/",
-  "logo": "https://norb-pharma-l77j.vercel.app/logo.png",
-  "sameAs": [
-    "https://ae.linkedin.com/company/norb-pharma"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+971502703654",
-    "contactType": "Customer Service",
-    "areaServed": "AE",
-    "availableLanguage": ["English"]
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "NORB Pharma",
+      "url": "https://norb-pharma-l77j.vercel.app/",
+      "logo": "https://norb-pharma-l77j.vercel.app/logo.png",
+      "sameAs": [
+        "https://ae.linkedin.com/company/norb-pharma"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Zara Khanam"
+      },
+      "employee": [
+        { "@type": "Person", "name": "Khalid Baig", "jobTitle": "Pharmacist & Regulatory Affairs" },
+        { "@type": "Person", "name": "Zara Khanam", "jobTitle": "Biomedical Engineer & Regulatory Affairs Specialist" },
+        { "@type": "Person", "name": "Gowher Mirza", "jobTitle": "Mechanical Engineer & DG Certified" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+971502703654",
+        "contactType": "Customer Service",
+        "areaServed": "AE",
+        "availableLanguage": ["English"]
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Medical Device Registration",
+      "areaServed": "AE",
+      "provider": { "@type": "Organization", "name": "NORB Pharma" }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Scientific Office & Drugstore Establishment",
+      "areaServed": "AE",
+      "provider": { "@type": "Organization", "name": "NORB Pharma" }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Medical Product & Device Registration with EDE",
+      "areaServed": "AE",
+      "provider": { "@type": "Organization", "name": "NORB Pharma" }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Supply of Chemicals, Reagents & Reference Standards",
+      "areaServed": "AE",
+      "provider": { "@type": "Organization", "name": "NORB Pharma" }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Method of Analysis (MOA) Development",
+      "areaServed": "AE",
+      "provider": { "@type": "Organization", "name": "NORB Pharma" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How to register medical devices in UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NORB Pharma guides you through every step of the EDE registration process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does EDE registration usually take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Timelines vary by product, but NORB Pharma typically helps clients achieve approval within weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can NORB Pharma assist with drugstore setup in the UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we handle the entire process from licensing to regulatory documentation."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
-
+</script>
+<meta name="google-site-verification" content="Y0tUsaUU0Kg6GG2z6lB-G2vCs5YV7-GmSZEFLlk-s3U" />
 </head>
 
 <body>
