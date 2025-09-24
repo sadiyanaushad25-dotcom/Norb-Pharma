@@ -7,6 +7,7 @@ export default function About() {
   { name: "Kahlid Baig", degree: "Certified Pharmacist & Regulatory Affairs" },
   { name: "Zara Khanam", degree: "Biomedical Engineer & Regulatory Affairs Specialis" },
   { name: "Gowher Mirza", degree: "Mechanical Engineer & DG certified" },
+  { name: "Sufyan baig", degree: "Digital marketing expert" },
 ];
   return (
     <div>
