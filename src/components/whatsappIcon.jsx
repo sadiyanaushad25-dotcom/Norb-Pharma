@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { MdWhatsapp } from "react-icons/md";
-import { phoneNumber } from "../constants/keywords"
+import { phoneNumber,whatsappText } from "../constants/keywords"
 
 export default function FloatingIcon() {
   const [tilt, setTilt] = useState(false);
@@ -16,7 +16,7 @@ export default function FloatingIcon() {
   }, []);
 
   const  openWhatsAppChat = (phoneNumber) => {
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hi`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappText}`;
     window.open(whatsappUrl, '_blank');
 }
 

@@ -17,3 +17,4 @@ export const landing_page_4 = "Your Innovation. Our Expertise. Seamless Results.
 export const hero_heading = "Seamless Regulatory Compliance for Medical Devices & Pharmaceuticals";
 export const about_us = "With over 22 years of experience in handling registrations and navigating regulations, we’ve built a track record of success that speaks for itself. But behind every achievement is a dedicated team committed to getting things right.";
 export const phoneNumber = "+971502703654";
+export const whatsappText = "Hello%20NORB%20Pharma,%20interested%20in%20your%20product%20registration%20services.%20Could%20you%20please%20guide%20me%20further%3F";
