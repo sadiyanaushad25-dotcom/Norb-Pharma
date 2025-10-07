@@ -2,14 +2,14 @@ import logo from '/logo.png';
 import { motion } from "framer-motion";
 import './Navbar.css';
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const navbarRef = useRef(null);
   const sectionOffsets = useRef({});
-  const location = useLocation();
+  // const location = useLocation();
 
   const sections = ["home", "services", "about", "contact"];
 
@@ -58,11 +58,11 @@ export default function Navbar() {
           if (current) {
             setActiveSection(current);
 
-            // push URL without reloading
-            const newPath = current === 'home' ? '/' : `/${current}`;
-            if (window.location.pathname !== newPath) {
-              window.history.replaceState({}, '', newPath);
-            }
+          //   // push URL without reloading
+          //   const newPath = current === 'home' ? '/' : `/${current}`;
+          //   if (window.location.pathname !== newPath) {
+          //     window.history.replaceState({}, '', newPath);
+          //   }
           }
 
           ticking = false;
@@ -80,10 +80,10 @@ export default function Navbar() {
   }, []);
 
   // 🔹 Whenever the URL changes, scroll to the section
-  useEffect(() => {
-    const path = location.pathname.replace('/', '') || 'home';
-    scrollToSection(path);
-  }, [location]);
+  // useEffect(() => {
+  //   const path = location.pathname.replace('/', '') || 'home';
+  //   scrollToSection(path);
+  // }, [location]);
 
   return (
     <nav ref={navbarRef} className={`navbar ${menuOpen ? 'open' : ''}`}>
