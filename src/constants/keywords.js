@@ -15,5 +15,5 @@ export const landing_page_2 = "Seamless Regulatory Compliance for Medical Device
 export const landing_page_3 = "Norb stands as your trusted partner in healthcare advancement— where regulatory success is not just promised, but delivered.";
 export const landing_page_4 = "Your Innovation. Our Expertise. Seamless Results.";
 export const hero_heading = "Seamless Regulatory Compliance for Medical Devices & Pharmaceuticals";
-export const about_us = "With over 15 years of experience in handling registrations and navigating regulations, we’ve built a track record of success that speaks for itself. But behind every achievement is a dedicated team committed to getting things right.";
+export const about_us = "With over 22 years of experience in handling registrations and navigating regulations, we’ve built a track record of success that speaks for itself. But behind every achievement is a dedicated team committed to getting things right.";
 export const phoneNumber = "+971502703654";

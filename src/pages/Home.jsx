@@ -30,7 +30,7 @@ export default function Home() {
       <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 3 }}
         className="divider"
       />
 
@@ -39,7 +39,7 @@ export default function Home() {
         initial={{ x: "-100vw", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
-        style={{ fontSize: "1.5rem", fontWeight: "700" }}
+        style={{ fontSize: "1rem", fontWeight: "600" }}
         className="cta-btn"
       >
         {landing_page_4}

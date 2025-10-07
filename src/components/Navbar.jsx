@@ -11,7 +11,7 @@ export default function Navbar() {
   const sectionOffsets = useRef({});
   const location = useLocation();
 
-  const sections = ["home", "about", "services", "contact"];
+  const sections = ["home", "services", "about", "contact"];
 
   const updateOffsets = () => {
     const offsets = {};
