@@ -16,7 +16,7 @@
   max-width: 90%;
   margin: 0 auto 2rem;
   font-size: 1rem;
-  color:rgb(80, 80, 83);
+  color:rgb(158, 158, 165);
 }
 
 .team-grid {
@@ -55,7 +55,7 @@
 }
 
 .team-card p {
-  color: #424242;
+  color: rgb(80, 80, 83);
   font-size: 0.95rem;
   font-weight: 500;
 }
