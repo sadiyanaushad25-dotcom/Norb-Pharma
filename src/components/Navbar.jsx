@@ -108,7 +108,7 @@ export default function Navbar() {
               className={activeSection === id ? "active link" : "link"}
               onClick={(e) => {
                 e.preventDefault();
-                window.history.pushState({}, '', path);
+                // window.history.pushState({}, '', path);
                 scrollToSection(id);
               }}
             >
