@@ -13,7 +13,7 @@
 }
 
 .service-box:hover {
-    transform: translateY(-7px); 
+    transform: translateY(-4px); 
     backdrop-filter: blur(1px) ;
     /* cursor: pointer; */
     border: 1px solid rgba(204, 200, 176, 0.84);
@@ -51,7 +51,7 @@
   justify-content: flex-start;
   align-items: baseline;
   color: rgb(156, 156, 158);
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: center;
 }
 

@@ -2,6 +2,7 @@ import TextReveal from '../TextReveal';
 import './ServiceCard.css';
 import { GiCheckMark } from "react-icons/gi";
 import { motion } from "framer-motion";
+import NoSpaceReveal from '../NoSpaceReveal';
 
 function ServiceCard({ iconSrc, name, description }) {
   return (
@@ -27,7 +28,7 @@ function ServiceCard({ iconSrc, name, description }) {
       <div className="name-text">{name}</div>
       <div className="desc-text">
         <GiCheckMark className='desc-icon'/>
-        <TextReveal
+        <NoSpaceReveal
         as="p"
         text={description}
         type="reverse"
