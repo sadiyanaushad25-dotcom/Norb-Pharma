@@ -6,6 +6,7 @@
   transition: transform 0.2s ease-in ;
   cursor: pointer;
   text-align: left;
+  font-size: larger;
 }
 
 .contact-icon {

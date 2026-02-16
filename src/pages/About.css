@@ -8,14 +8,15 @@
 .team-header-h2{
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: rgb(156, 156, 158);
+  color:rgb(231, 231, 231);
+  /* color: rgb(156, 156, 158); */
   font-family: "Cinzel", serif;
 }
 
 .team-header p {
   max-width: 90%;
   margin: 0 auto 2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color:rgb(158, 158, 165);
 }
 
@@ -49,13 +50,15 @@
 
 .team-names {
   margin: 0.5rem 0 0.2rem;
-  font-size: 1.1rem;
-  color:rgb(156, 156, 158);
+  font-size: 1.3rem;
+  /* color:rgb(156, 156, 158); */
+  color: rgb(231, 231, 231);
   font-family: "Cinzel", serif;
 }
 
 .team-card p {
-  color: rgb(80, 80, 83);
-  font-size: 0.95rem;
+  /* color: rgb(80, 80, 83); */
+  color: rgb(178, 178, 185);
+  font-size: 1.15rem;
   font-weight: 500;
 }
