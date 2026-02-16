@@ -11,6 +11,7 @@ import { useProgress } from "@react-three/drei";
 import { LayoutGroup  } from "framer-motion";
 import "./App.css"
 import FloatingIcon from "./components/whatsappIcon";
+import InfoSection from "./pages/InfoSection";
 
 function App() {
   const { progress, loaded } = useProgress(); // Track DNA loading
@@ -43,7 +44,10 @@ function App() {
 
       {/* Sections */}
       <section className="responsive-section">
-      <AnimatedSection id="home"><Home /></AnimatedSection>
+        <div style={{display:"flex", flexDirection:"column", gap:"2.5rem"}}>
+          <AnimatedSection id="home"><Home /> </AnimatedSection>
+          <InfoSection />
+        </div>
       <AnimatedSection id="services"><Services /></AnimatedSection>
       <AnimatedSection id="about"><About /></AnimatedSection>
       <AnimatedSection id="contact"><Contact /></AnimatedSection>

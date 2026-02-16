@@ -1,0 +1,30 @@
+.card-wrapper {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 1.5rem;
+  /* width: 63vw; */
+  margin-left: 2rem;
+}
+
+/* The heading box */
+.card-heading {
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  background: rgb(122, 122, 126);
+  padding: 8px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  font-family: "Cinzel", serif;
+  font-size: 1.5em;
+}
+
+/* Content */
+.card-content {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 300;
+}
