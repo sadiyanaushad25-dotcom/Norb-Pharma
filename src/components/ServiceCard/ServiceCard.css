@@ -50,8 +50,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  color: rgb(156, 156, 158);
-  font-size: 1rem;
+  /* color: rgb(156, 156, 158); */
+  color: rgb(178, 178, 185);
+  font-size: 1.3rem;
   text-align: center;
 }
 
